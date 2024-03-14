@@ -1,6 +1,7 @@
 const retry = require('retry');
 const isNetworkError = require('@common.js/is-network-error').default;
 
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.AbortError = class AbortError extends Error {
 	constructor(message) {
 		super();
