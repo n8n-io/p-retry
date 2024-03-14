@@ -1,5 +1,5 @@
 {
-	"name": "p-retry",
+	"name": "@n8n/p-retry",
 	"version": "6.2.0",
 	"description": "Retry a promise-returning or async function",
 	"license": "MIT",
@@ -10,12 +10,11 @@
 		"email": "sindresorhus@gmail.com",
 		"url": "https://sindresorhus.com"
 	},
-	"type": "module",
-	"exports": "./index.js",
+	"main": "./index.js",
 	"types": "./index.d.ts",
 	"sideEffects": false,
 	"engines": {
-		"node": ">=16.17"
+    "node": ">=18.10"
 	},
 	"scripts": {
 		"test": "xo && ava && tsd"
@@ -44,11 +43,11 @@
 		"bluebird"
 	],
 	"dependencies": {
-		"@types/retry": "0.12.2",
-		"is-network-error": "^1.0.0",
-		"retry": "^0.13.1"
+		"retry": "0.13.1",
+		"@common.js/is-network-error": "1.0.1"
 	},
 	"devDependencies": {
+		"@types/retry": "^0.12.5",
 		"ava": "^5.3.1",
 		"delay": "^6.0.0",
 		"tsd": "^0.28.1",

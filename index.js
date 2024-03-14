@@ -1,7 +1,7 @@
-import retry from 'retry';
-import isNetworkError from 'is-network-error';
+const retry = require('retry');
+const isNetworkError = require('@common.js/is-network-error').default;
 
-export class AbortError extends Error {
+exports.AbortError = class AbortError extends Error {
 	constructor(message) {
 		super();
 
@@ -27,7 +27,7 @@ const decorateErrorWithCounts = (error, attemptNumber, options) => {
 	return error;
 };
 
-export default async function pRetry(input, options) {
+exports.default = async function pRetry(input, options) {
 	return new Promise((resolve, reject) => {
 		options = {
 			onFailedAttempt() {},
